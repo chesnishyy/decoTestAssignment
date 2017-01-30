@@ -1,0 +1,50 @@
+@import "./base/_mixin";
+
+footer {
+    border-top: 1px solid #dfdfe2;
+    text-align: center;
+    padding-top: 20px;
+    font-family: "GothaPro";
+    font-weight: normal;
+    font-size: 16px;
+    .foot-text {
+        span {
+            font-weight: bold;
+        }
+
+        p {
+
+        }
+
+        a {
+            color: #a70c5d;
+        }
+    }
+
+    .foot-links {
+        display: flex;
+        justify-content: center;
+        .fb {
+            @include footer-links;
+            &:hover {
+                background-position: 0 -438px;
+            }
+        }
+
+        .tw {
+            @include footer-links;
+            background-position: 0 -393px;
+            &:hover {
+                background-position: 0 -348px;
+            }
+        }
+
+        .in {
+            @include footer-links;
+            background-position: 0 -483px;
+            &:hover {
+                background-position: 0 -258px;
+            }
+        }
+    }
+}

@@ -1,0 +1,106 @@
+
+@mixin clearfix {
+	zoom:1;
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+}
+//-----------gradient---------------
+@mixin background-gradient($start-color, $end-color, $orientation) {
+	background: $start-color;
+
+	@if $orientation == 'vertical' {
+		background: -webkit-linear-gradient(top, $start-color, $end-color);
+		background: linear-gradient(to bottom, $start-color, $end-color);
+	} @else if $orientation == 'horizontal' {
+		background: -webkit-linear-gradient(left, $start-color, $end-color);
+		background: linear-gradient(to right, $start-color, $end-color);
+	} @else {
+		background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+		background: radial-gradient(ellipse at center, $start-color, $end-color);
+	}
+}
+
+//-------------font face--------------------
+@mixin font-face($font-name, $file-name) {
+	@font-face {
+		font-family: quote($font-name);
+		src: url('assets/fonts/'+ $file-name + '.otf');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+//-------------input placeholder---------------------
+@mixin placeholder($color, $font){
+	&::-webkit-input-placeholder { color:$color; font-family:$font;}
+	&::-moz-placeholder { color:$color; font-family:$font;}
+	&:-ms-input-placeholder { color:$color; font-family:$font;}
+	&:-moz-placeholder { color:$color; font-family:$font;}
+}
+
+@mixin columns($count, $gap){
+	-webkit-column-count: $count;
+	-moz-column-count:    $count;
+	column-count:         $count;
+
+	-webkit-column-gap:   $gap;
+	-moz-column-gap:      $gap;
+	column-gap:           $gap;
+}
+
+@mixin transform($gg) {
+  -webkit-transform: $gg;
+  -moz-transform: $gg;
+  -ms-transform: $gg;
+  -o-transform: $gg;
+	transform: $gg;
+}
+@mixin transition($what, $time) {
+  transition: $what $time;
+  -webkit-transition: $what $time;
+  -moz-transition:$what $time;
+  -o-transition: $what $time;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+  -moz-box-sizing: $box-model; // Firefox <= 19
+  box-sizing: $box-model;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+
+  -webkit-box-shadow:$top $left $blur $color #{$inset};
+  -moz-box-shadow:$top $left $blur $color #{$inset};
+  box-shadow:$top $left $blur $color #{$inset};
+}
+
+@mixin rotate( $val: -2deg ) {
+  -webkit-transform: rotate($val);
+  -moz-transform: rotate($val);
+  -ms-transform: rotate($val);
+  -o-transform: rotate($val);
+  transform: rotate($val);
+}
+
+@mixin footer-links {
+	display: block;
+	background: url('assets/img/sprites/sprite.png') no-repeat;
+	width: 41px;
+	height: 40px;
+	margin-top: 20px;
+	background-position: 0 -303px;
+	margin-right: 5px;
+}
+

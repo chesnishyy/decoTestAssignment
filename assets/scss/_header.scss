@@ -1,0 +1,98 @@
+header {
+  background-color: #f5f5f5;
+}
+.header-container {
+  @extend %clear;
+  padding-top: 44px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.menu-wrap li {
+  float: left;
+  display: block;
+  line-height: 53px;
+  margin-right: 24px;
+  a{
+    text-decoration: none;
+    &:hover {
+      color: #a70c5d;
+    }
+  }
+}
+
+.menu-wrap ul {
+  @extend %clear;
+  margin-right: 100px;
+}
+
+.menu-wrap li a {
+  color: #3f4147;
+}
+
+.menu-wrap {
+  float: right;
+}
+
+.logo {
+  float: left;
+}
+
+.header-container {
+  max-width: 1062px;
+
+}
+
+.lang-button {
+  color: $primarycolor;
+  float: right;
+  font-size: 11px;
+  border: 2px solid #c9cacf;
+  border-radius: 19px;
+  width: 68px;
+  height: 34px;
+}
+
+.rus {
+  @include transform(translate(0, -23%));
+}
+
+.lang-button span {
+  vertical-align: middle;
+}
+
+.lang-ico {
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.lang-ico::after {
+  content: '•';
+  font-size: 59px;
+  color: #dfdfe2;
+  vertical-align: middle;
+}
+
+.en {
+  display: none;
+}
+
+.btn-menu {
+  border: none;
+  background: none;
+}
+
+.btn-menu-ico::after {
+  content: '';
+  width: 33px;
+  height: 33px;
+  background: url(assets/img/mobi-menu.svg);
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.mobile-menu {
+  float: right;
+  margin-right: 20px;
+}
+

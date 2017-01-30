@@ -1,0 +1,24 @@
+ //Base Style
+@import "base/_mixin";		// миксины
+@import "base/_fonts";		// шрифты
+@import "base/_variables";	// переменные
+@import "base/_extend";		// расширения
+@import "base/_function";	// функции
+@import "base/_sprite";		// спрайт
+@import "base/_normilize";		//
+@import "base/_grid";		// сетка
+
+
+//	Style
+@import "btnsIcons";	    // кнопки, иконки
+@import "some";			    // стили основные-всякие
+@import "header";		    // стили шапки
+@import "footer";		    // стили футера
+@import "sidebar";		    // стили виджетов сайдбара
+@import "excerpt";			// post excerpts
+@import "post";				// стили поста
+@import "adaptive";			// стили адаптивки
+@import "section_request";
+
+
+
